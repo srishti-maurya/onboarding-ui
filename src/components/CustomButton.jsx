@@ -4,13 +4,13 @@ import React from 'react';
 export const CustomButton = ({ title, clickHandler }) => {
   return (
     <>
-      <Box width="30%" paddingTop={2}>
+      <Box w={[300, 400, 500]} paddingTop={2}>
         <Button
           bgColor="#664de5"
           color="purple.50"
           size="md"
           width="100%"
-          fontSize="sm"
+          fontSize={{ base: '12px', md: '12px', lg: '14px' }}
           onClick={clickHandler}
         >
           {title}

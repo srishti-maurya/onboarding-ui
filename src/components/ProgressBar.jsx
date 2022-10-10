@@ -10,7 +10,7 @@ export const ProgressBar = ({
 }) => {
   return (
     <>
-      <Box w="25%" position="relative" h={20}>
+      <Box w={[300, 400, 500]} position="relative" h={[12, 20]}>
         <Circle
           size="40px"
           bg={firstFilled ? '#664de5' : 'white'}
@@ -22,7 +22,10 @@ export const ProgressBar = ({
           borderColor="#664de5"
           border="1px"
         >
-          <Text color={firstFilled ? 'white.600' : 'gray.600'} fontSize="sm">
+          <Text
+            color={firstFilled ? 'white.600' : 'gray.600'}
+            fontSize={{ base: '12px', md: '12px', lg: '14px' }}
+          >
             1
           </Text>
         </Circle>
@@ -36,7 +39,10 @@ export const ProgressBar = ({
           left="30%"
           border="1px"
         >
-          <Text color={secondFilled ? 'white.600' : 'gray.600'} fontSize="sm">
+          <Text
+            color={secondFilled ? 'white.600' : 'gray.600'}
+            fontSize={{ base: '12px', md: '12px', lg: '14px' }}
+          >
             2
           </Text>
         </Circle>
@@ -50,7 +56,10 @@ export const ProgressBar = ({
           left="60%"
           border="1px"
         >
-          <Text color={thirdFilled ? 'white.600' : 'gray.600'} fontSize="sm">
+          <Text
+            color={thirdFilled ? 'white.600' : 'gray.600'}
+            fontSize={{ base: '12px', md: '12px', lg: '14px' }}
+          >
             3
           </Text>
         </Circle>
@@ -64,7 +73,10 @@ export const ProgressBar = ({
           zIndex="1"
           right="0"
         >
-          <Text color={fourthFilled ? 'white.600' : 'gray.600'} fontSize="sm">
+          <Text
+            color={fourthFilled ? 'white.600' : 'gray.600'}
+            fontSize={{ base: '12px', md: '12px', lg: '14px' }}
+          >
             4
           </Text>
         </Circle>

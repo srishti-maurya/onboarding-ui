@@ -28,7 +28,7 @@ export const OnboardingUI2 = () => {
         desc="You can always create another workspace later."
       />
       <CustomInputGroup label="Workspace Name" placeholder="Eden" />
-      <Box w="30%" pb="2">
+      <Box w={[300, 400, 500]} pb="2">
         <HStack spacing={1}>
           <Text fontSize="xs" as="b" color="gray.600" pb={2}>
             Workspace URL
@@ -40,10 +40,14 @@ export const OnboardingUI2 = () => {
         <InputGroup>
           <InputLeftAddon
             children="www.eden.com/"
-            fontSize="sm"
+            fontSize={{ base: '12px', md: '12px', lg: '14px' }}
             color="gray.500"
           />
-          <Input type="web" placeholder="Example" fontSize="sm" />
+          <Input
+            type="web"
+            placeholder="Example"
+            fontSize={{ base: '12px', md: '12px', lg: '14px' }}
+          />
         </InputGroup>
       </Box>
       <CustomButton title="Create Workspace" clickHandler={clickHandler} />

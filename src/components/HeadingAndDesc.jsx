@@ -5,15 +5,13 @@ export const HeadingAndDesc = ({ title, desc }) => {
   return (
     <>
       <Center>
-        <Box textAlign="center" mb={10}>
+        <Box textAlign="center" mb={10} w={[300, 400, 500]}>
           <Box mb={2}>
-            <Text fontSize="3xl" as="b">
+            <Text fontSize={{ base: '24px', md: '26px', lg: '28px' }} as="b">
               {title}
             </Text>
           </Box>
-          <Text fontSize="sm" color="gray.500">
-            {desc}
-          </Text>
+          <Text color="gray.500">{desc}</Text>
         </Box>
       </Center>
     </>
