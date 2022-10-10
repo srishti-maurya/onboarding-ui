@@ -1,5 +1,48 @@
+import {
+  Box,
+  HStack,
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 import React from 'react';
+import { HeadingAndDesc } from '../components/HeadingAndDesc';
+import { CustomInputGroup } from '../components/CustomInputGroup';
+import { LogoContainer } from '../components/LogoContainer';
+import { ProgressBar } from '../components/ProgressBar';
+import { CustomButton } from '../components/CustomButton';
 
 export const OnboardingUI2 = () => {
-  return <div>OnboardingUI2</div>;
+  return (
+    <VStack>
+      <LogoContainer />
+      <ProgressBar firstFilled secondFilled progressVal={50} />
+      <HeadingAndDesc
+        title={`Let's set up a home for all your work`}
+        desc="You can always create another workspace later."
+      />
+      <CustomInputGroup label="Workspace Name" placeholder="Eden" />
+      <Box w="30%" pb="2">
+        <HStack spacing={1}>
+          <Text fontSize="xs" as="b" color="gray.600" pb={2}>
+            Workspace URL
+          </Text>
+          <Text fontSize="xs" color="gray.400" pb={2}>
+            (optional)
+          </Text>
+        </HStack>
+        <InputGroup>
+          <InputLeftAddon
+            children="www.eden.com/"
+            fontSize="sm"
+            color="gray.500"
+          />
+          <Input type="web" placeholder="Example" fontSize="sm" />
+        </InputGroup>
+      </Box>
+      <CustomButton title="Create Workspace" />
+    </VStack>
+  );
 };
