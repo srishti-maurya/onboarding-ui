@@ -4,7 +4,7 @@ import React from 'react';
 export const CustomButton = ({ title }) => {
   return (
     <>
-      <Box width="30%" paddingTop={4}>
+      <Box width="30%" paddingTop={2}>
         <Button
           bgColor="#664de5"
           color="purple.50"
