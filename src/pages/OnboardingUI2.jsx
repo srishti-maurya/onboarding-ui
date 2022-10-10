@@ -10,14 +10,18 @@ import {
 import React from 'react';
 import { HeadingAndDesc } from '../components/HeadingAndDesc';
 import { CustomInputGroup } from '../components/CustomInputGroup';
-import { LogoContainer } from '../components/LogoContainer';
 import { ProgressBar } from '../components/ProgressBar';
 import { CustomButton } from '../components/CustomButton';
+import { useNavigate } from 'react-router-dom';
 
 export const OnboardingUI2 = () => {
+  const navigate = useNavigate();
+  const clickHandler = () => {
+    navigate('/step3');
+  };
+
   return (
     <VStack>
-      <LogoContainer />
       <ProgressBar firstFilled secondFilled progressVal={50} />
       <HeadingAndDesc
         title={`Let's set up a home for all your work`}
@@ -42,7 +46,7 @@ export const OnboardingUI2 = () => {
           <Input type="web" placeholder="Example" fontSize="sm" />
         </InputGroup>
       </Box>
-      <CustomButton title="Create Workspace" />
+      <CustomButton title="Create Workspace" clickHandler={clickHandler} />
     </VStack>
   );
 };
